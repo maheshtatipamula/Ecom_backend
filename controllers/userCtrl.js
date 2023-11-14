@@ -28,7 +28,6 @@ const verifyUser = asyncHandler(async (req, res) => {
 
   const findUser = await User.findOne({ email }).select("password");
   if (!findUser) throw new Error("Invalid Credentials ");
-  const is = await findUser.isPasswordMatched(password);
 
   if (findUser && (await findUser.isPasswordMatched(password))) {
     const token = await generateToken(findUser._id);
