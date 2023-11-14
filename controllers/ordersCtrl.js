@@ -57,7 +57,7 @@ const createOrder = asyncHandler(async (req, res) => {
     // });
     const resetUrl = `<p>hey ${user.addresses[0].name}<br>
     Thank You For Ordering<br>
-    your order i successfully placed <br>
+    your order is successfully placed <br>
     here is your order id ${doc._id} <br>
     here are the details fo your order<br>
     payment method you have selected is ${doc.paymentMethod}<br>
