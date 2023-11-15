@@ -55,23 +55,104 @@ const createOrder = asyncHandler(async (req, res) => {
     //   html: invoiceTemplate(order),
     //   subject: "Order Received",
     // });
-    const resetUrl = `<p>hey ${user.addresses[0].name}<br>
-    Thank You For Ordering<br>
-    your order is successfully placed <br>
-    here is your order id ${doc._id} <br>
-    here are the details fo your order<br>
-    payment method you have selected is ${doc.paymentMethod}<br>
-    total items ${doc.totalItems}
-    <p>`;
+    console.log(doc);
+    const resetUrl = `<!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Order Confirmation</title>
+      <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #f4f4f4;
+        }
+    
+        header {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 1em;
+        }
+    
+        main {
+          max-width: 800px;
+          margin: 20px auto;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    h1{
+      color:#fff;
+    }
+       h2 {
+          color: #111;
+        }
+    
+        p {
+          color: #333;
+        }
+    
+        ol {
+          list-style-type: none;
+          padding: 0;
+        }
+    
+        li {
+          margin-bottom: 20px;
+          padding: 10px;
+          background-color: #f9f9f9;
+          border-radius: 4px;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    
+        strong {
+          color: #333;
+        }
+    
+        img {
+          max-width: 100%;
+          height: auto;
+          border-radius: 4px;
+          margin-top: 10px;
+        }
+      </style>
+    </head>
+    <body>
+    
+      <header>
+        <h1>Order Confirmation</h1>
+      </header>
+    
+      <main>
+        <p>Hey ${doc.selectAddress.name},</p>
+        <p>Thank you for your order! Your order has been successfully placed.</p>
+        
+        <h2>Order Details</h2>
+        <p>Order ID: ${doc._id}</p>
+        <p>Payment Method: ${doc.paymentMethod}</p>
+        <p>Total Items: ${doc.totalItems}</p>
+        <p>Total Amount: ${doc.totalAmount}</p>
+    
+      
+    
+        <p>Thank you for shopping with us!</p>
+      </main>
+    
+    </body>
+    </html>`;
 
     const data = {
       to: user.email,
-      text: `hey ${user.addresses[0].name} `,
+      text: `hey ${doc.selectAddress.name} `,
       subject: `order placed successfully `,
       html: resetUrl,
     };
 
-    await sendEmail(data);
+    sendEmail(data);
 
     res.status(201).json(doc);
   } catch (err) {
