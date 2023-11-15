@@ -15,11 +15,11 @@ const sendEmail = asyncHandler(async (data, req, res) => {
   });
 
   let info = await transporter.sendMail({
-    from: '"Start Up" <bbc@gmail.com.com>', // sender address
-    to: data.to, // list of receivers
-    subject: data.subject, //"hello veda",  Subject line
-    text: data.text, //"hi i miss you i found a new way lets chat using mail", // plain text body
-    html: data.html, // html body
+    from: '"Start Up" <bbc@gmail.com.com>',
+    to: data.to,
+    subject: data.subject,
+    text: data.text,
+    html: data.html,
   });
 
   console.log("Message sent: %s", data.to, data.html, info.messageId);
