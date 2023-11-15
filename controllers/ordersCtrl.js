@@ -55,7 +55,7 @@ const createOrder = asyncHandler(async (req, res) => {
     //   html: invoiceTemplate(order),
     //   subject: "Order Received",
     // });
-    console.log(doc);
+
     const resetUrl = `<!DOCTYPE html>
     <html lang="en">
     <head>
