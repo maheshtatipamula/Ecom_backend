@@ -8,106 +8,14 @@
     <p>This is the home page content. Welcome to our website!</p>
     <p>here is brief summary of this project </p>
     <p><strong >Technologies Used: </strong>Node.js,express.js,mongodb </p>
+    <p><strong>Link: </strong> https://ecom-backend-maheshtatipamula.vercel.app/</p>
     <p><strong>Features:</strong></p>
+    
     <ol>
       <li>For authentication, I have used JSON Web Token (jsonwebtoken).</li>
       <li>It has an email feature: On successful orders, the user will be sent an email including the order details.</li>
       <li>it has wishlist feature, user can add products to wishlist</li>
       <li>it has Cart feature, user can add products to Cart</li>
-      
-
-    </ol>
-   <div>  <strong>Github :  </strong><a href="https://github.com/maheshtatipamula/Ecom_backend" target="blank">click here to open github repo</a></div>
-        <h4>User and Auth</h4>
-
-    <ol>
-      <li>
-        <p>to register the api endpoint is  "/api/user/register"</p>
-        <img src="/register.png" alt="register">
-      </li>
-      <li>
-        <p>to login the api endpoint is  "/api/user/login"</p>
-        <img src="/login.png" alt="login">
-      </li>
-      <li>
-        <p>to update the api endpoint is  "/api/user/update"</p>
-        <img src="/update.png" alt="update">
-      </li>
-      <li>
-        <p>to own profile the api endpoint is  "/api/user/my-profile"</p>
-        <img src="/my-profile.png" alt="my-profile">
-      </li>  <li>
-        <p>to add product to wishlist the api endpoint is  "/api/user//add-to-wishlist/:id"</p>
-        <img src="/add-to-wishlist.png" alt="/add-to-wishlist">
-      </li>
-      <li>
-        <p>to fetch wishlist the api endpoint is  "/api/user/get-wishlist-products"</p>
-        <img src="/get-wishlist.png" alt="wishlist">
-      </li> <li>
-        <p>to delete address the api endpoint is  "/api/user/delete-address/:id"</p>
-        <img src="/delete-address.png" alt="del-address">
-      </li>
-    </ol>
-    <h4>Products</h4>
-
-    <ol>
-        <li>
-          <p>to add products the api endpoint is  "/api/products/post-product"</p>
-          <img src="/add-product.png" alt="add-product">
-        </li>
-        <li>
-          <p>to get all products the api endpoint is  "/api/products/get-all-products"</p>
-          <img src="/get-all-products.png" alt="get-all-products">
-        </li>
-        <li>
-          <p>to get-a-product the api endpoint is  "/api/products/get-a-product/:id"</p>
-          <img src="/get-single-product.png" alt="get-single-product">
-        </li>
-      </ol>
-      <h3>Brands</h3>
-      <ol>
-        <li>
-          <p>to get all brands the api endpoint is  "/api/brands/get-all-brands"</p>
-          <img src="/brands.png" alt="get-all-brands">
-        </li>
-        
-      </ol>
-      <h3>Categories</h3>
-      <ol>
-        <li>
-          <p>to get all Categories the api endpoint is  "/api/category/get-all-categories"</p>
-          <img src="/category.png" alt="get-all-categories">
-        </li>
-        
-      </ol>
-      <h3>Cart</h3>
-      <ol>
-        <li>
-          <p>to get all Categories the api endpoint is  "/api/cart/add-to-cart"</p>
-          <img src="/add-to-cart.png" alt="add-to-cart">
-        </li>
-        <li>
-            <p>to get all Categories the api endpoint is  "/api/cart/get-all-cart"</p>
-            <img src="/get-all-cart.png" alt="get-all-cart">
-          </li> <li>
-            <p>to get all Categories the api endpoint is  "/api/cart/delete-cart-item/:id"</p>
-            <img src="/delete-cart.png" alt="delete-cart-item">
-          </li> <li>
-            <p>to get all Categories the api endpoint is  "/api/cart/update-cart-item/:id"</p>
-            <img src="/update-cart.png" alt="update-cart-item">
-          </li>
-        
-      </ol>
-      <h3>Orders</h3>
-      <ol>
-       
-        <li>
-            <p>to get all orders the api endpoint is  "/api/orders/get-my-orders"</p>
-            <img src="/get-my-orders.png" alt="get-my-orders">
-          </li> <li>
-            <p>to get single order the api endpoint is  "/api/orders/get-my-order/:id"</p>
-            <img src="/get-single-order.png" alt="get-my-order">
-          </li>
         
       </ol>
   </main>
