@@ -51,6 +51,7 @@ class ApiFeatures {
   sort() {
     if (this.queryStr.sort) {
       const sortBy = this.queryStr.sort.split(",").join(" ");
+
       this.query = this.query.sort(sortBy);
     } else {
       this.query = this.query.sort("-createdAt");
@@ -62,6 +63,7 @@ class ApiFeatures {
   limitingFields() {
     if (this.queryStr.fields) {
       const fields = this.queryStr.fields.split(",").join(" ");
+
       this.query = this.query.select(fields);
     } else {
       this.query = this.query.select("-__v ");
